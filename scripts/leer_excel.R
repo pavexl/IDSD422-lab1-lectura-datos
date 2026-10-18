@@ -3,4 +3,13 @@
 #   Rscript scripts/leer_excel.R
 
 # TODO 1: carga data/ventas.xlsx con readxl::read_excel indicando la hoja
+library(readxl)
+
+ventas <- read_excel("data/ventas.xlsx", sheet = "ventas")
+
 # TODO 2: imprime las dimensiones (dim) y las primeras filas (head)
+print("Dimensiones:")
+print(dim(ventas))
+
+print("Primeras filas:")
+print(head(ventas))
