@@ -3,7 +3,24 @@
 #   python scripts/leer_json.py
 
 # TODO 1: importa json y pandas
+import json
+import pandas as pd
+
 # TODO 2: carga data/ventas.json con json.load
+with open("data/ventas.json", "r", encoding = "utf-8") as archivo:
+    datos = json.load(archivo)
+
 # TODO 3: convierte la lista de diccionarios en un DataFrame
 #         (recuerda del cap. 2: el JSON no llega como tabla directa)
+ventas = pd.DataFrame(datos)
+
 # TODO 4: imprime las dimensiones y las primeras filas
+print("Dimensiones:")
+print(ventas.shape)
+
+print("\nPrimeras filas del archivo:")
+print(ventas.head())
+
+#Imprimir los tipos de columna
+print("\nTipos de columna:")
+print(ventas.dtypes)
