@@ -10,3 +10,46 @@
 #         - ticket promedio (ventas totales / clientes totales)
 #         - sucursal con mayor y menor venta
 #         - región con mayor venta total
+
+import pandas as pd
+
+ventas = pd.read_csv("data/ventas.csv")
+
+print("Tipos de columnas:")
+print(ventas.dtypes)
+
+# Crear la columna derivada ticket
+ventas["ticket"] = ventas["ventas"] / ventas["clientes"]
+
+print("\nDatos con la columna ticket: ")
+print(ventas)
+
+#1. Venta promedio por sucursal
+print("\nVenta promedio por sucursal:")
+print(ventas["ventas"].mean())
+
+#2. Ticket promedio general
+ticket_promedio = ventas["ventas"].sum() / ventas["clientes"].sum()
+print("\nTicket promedio general:")
+print(ticket_promedio)
+
+#3. Sucursal con mayor y menor venta
+indice_mayor = ventas["ventas"].idxmax()
+indice_menor = ventas["ventas"].idxmin()
+
+print("\nSucursal con mayor venta:")
+print("Sucursal:", ventas.loc[indice_mayor, "sucursal"])
+print("Ventas:", ventas.loc[indice_mayor, "ventas"])
+
+print("\nSucursal con menor venta:")
+print("Sucursal:", ventas.loc[indice_menor, "sucursal"])
+print("Ventas:", ventas.loc[indice_menor, "ventas"])
+
+# 4. Region con mayor venta total
+ventas_por_region = ventas.groupby("region")["ventas"].sum()
+
+print("\nVentas totales por region: ")
+print(ventas_por_region)
+
+print("\nRegion con mayor venta total:")
+print(ventas_por_region.idxmax())
