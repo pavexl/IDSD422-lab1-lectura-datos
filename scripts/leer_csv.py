@@ -3,5 +3,18 @@
 #   python scripts/leer_csv.py
 
 # TODO 1: importa pandas y carga data/ventas.csv en un DataFrame
+import pandas as pd
+
+ventas = pd.read_csv("data/ventas.csv")
+
 # TODO 2: imprime las dimensiones (filas, columnas) del DataFrame
+print("Dimensiones: ")
+print(ventas.shape)
+
 # TODO 3: imprime las primeras filas para revisar las columnas
+print("\nPrimeras filas del archivo: ")
+print(ventas.head())
+
+#imprimir los tipos de columna
+print("\nTipos de columna: ")
+print(ventas.dtypes)
