@@ -26,7 +26,7 @@ print(ventas)
 
 #1. Venta promedio por sucursal
 print("\nVenta promedio por sucursal:")
-print(ventas["ventas"].mean())
+print(ventas.groupby("sucursal")["ventas"].mean())
 
 #2. Ticket promedio general
 ticket_promedio = ventas["ventas"].sum() / ventas["clientes"].sum()
