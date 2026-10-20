@@ -64,7 +64,7 @@ A partir de los datos consolidados de las cinco sucursales, calculé los indicad
 
 | Indicador | Valor |
 |---|---|
-| Venta promedio por sucursal |Cuenca (8.540) <br> Guayaquil Centro (15.200) <br> Guayaquil Norte (13.980) <br> Quito Norte (12.450) <br> Quito Sur (9.870)|
+| Venta promedio por sucursal |Cuenca (8.540) <br> Guayaquil Centro (15.200) <br> Guayaquil Norte (13.980) <br> Quito Norte (12.450) <br> Quito Sur (9.870) <br> TOTAL (PROMEDIO): 12.008 |
 | Ticket promedio (ventas ÷ clientes) | 38,072|
 | Sucursal con mayor venta |Guayaquil Centro (15.200) |
 | Sucursal con menor venta |Cuenca (8.540) |
